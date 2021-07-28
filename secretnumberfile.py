@@ -12,8 +12,12 @@ print(
 
 
 secret_number = 777
-guess = int(input("Enter your number: "))
+guess = int(input("Enter your 3 digit number: "))
 while guess != secret_number:
-      print ("Wrong! try again")
-else:
-    print ("Good job",secret_number )
+
+    if guess > secret_number:
+       guess = int(input("Enter a number or  secret number to stop: "))
+    elif guess < secret_number:
+       guess = int(input("Enter a number or  secret number to stop: "))  
+    else: 
+        print ("Good job",secret_number )
